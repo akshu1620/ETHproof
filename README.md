@@ -12,7 +12,7 @@ Built on the Ethereum network, AkshatBegContract is a straightforward token smar
 
 ## Contract Information
 
-### State Factors
+### State Variables
 
 - tokenName: The token's name. (Open to the public)
 tokenAbbr: The token's abbreviation. (Open to the public)
@@ -23,23 +23,23 @@ tokenAbbr: The token's abbreviation. (Open to the public)
 
 #### mint
 
-solidity function mint(uint amount, address addr) outside
+solidity function mint(address addr,uint amount) external
 
 
 - Description: Adds to the overall supply by minting new tokens and allocating them to the designated address.
 - Parameters:
   - addr: The address that the tokens that are minted will be sent to.
   - amount: The quantity of tokens to be produced.
-* Visibility*: outside
+* Visibility*: external
 
 #### burn
 
-solidity function burn (uint amount, address addr) outside
+solidity function burn (address addr,uint amount) external
 
 
 - Description: Reduces the overall supply of tokens by burning them from the designated address.
 - Parameters:
   - addr: The address where the burned tokens will come from.
-  - quantity: The quantity of tokens to be burned.
-* Visibility*: outside
+  - amount: The quantity of tokens to be burned.
+* Visibility*: external
 - Condition: The function determines whether the overall supply exceeds the amount that needs to be burned and whether the address has enough balance to burn.
